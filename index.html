@@ -5,13 +5,136 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="assets/style/normalize.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/style/header.css">
+  <link rel="stylesheet" href="assets/style/footer.css">
+
   <title>Document</title>
 </head>
 
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header class="header">
+    <div class="container header__container">
+      <img class="header__logo" src="assets/img/logo.svg" alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг" />
+      <nav class="header__nav">
+        <ul class="header__menu list-reset">
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Обо мне</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#">Консультации</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link link" href="#footer">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button button">Получить консультацию</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-offset">
+      <div class="container hero__container">hero</div>
+    </section>
+    <section class="services section-offset">
+      <div class="container services__container">services</div>
+    </section>
+    <section class="advantages section-offset">
+      <div class="container advantages__container">advantages</div>
+    </section>
+  </main>
+
+  <footer class="footer section-offset" id="footer">
+    <div class="container footer__container">
+      <img class="footer__logo" src="assets/img/logo.svg" alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг" />
+      <ul class="footer__list footer__social list-reset">
+        <li class="footer__item">
+          <a class="footer__link link" href="#">
+            <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <path
+                d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
+              <path d="M256,211.545A44.455,44.455,0,1,0,300.455,256,44.455,44.455,0,0,0,256,211.545Z" />
+              <path
+                d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.333,312.5A76.836,76.836,0,0,1,312.5,389.333H199.5A76.837,76.837,0,0,1,122.666,312.5V199.5A76.836,76.836,0,0,1,199.5,122.667H312.5A76.836,76.836,0,0,1,389.333,199.5Z" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#">
+            <svg data-name="Layer 2" id="Layer_2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <path
+                d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.059,161.936,343.591,379a16.007,16.007,0,0,1-25.177,9.593l-66.136-48.861-40.068,37.8a5.429,5.429,0,0,1-7.74-.294l-.861-.946,6.962-67.375L336.055,194.266a3.358,3.358,0,0,0-4.061-5.317L171.515,290.519,102.4,267.307a9.393,9.393,0,0,1-.32-17.694L372.5,147.744A12.441,12.441,0,0,1,389.059,161.936Z" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#">
+            <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <g data-name="Layer 3" id="Layer_3">
+                <g data-name="Layer 3" id="Layer_3-3">
+                  <path
+                    d="M48,0A48,48,0,1,0,96,48,48,48,0,0,0,48,0Zm2.71,25.64c10.69.33,19.93,10,19.8,20.37a4.15,4.15,0,0,0,.05.79c0,.85-.05,1.73-1.23,1.7-1.34,0-1.15-1.32-1.23-2.33V45.9c-1.43-11-6.55-16.21-17.71-17.9-.93-.11-2.33.05-2.3-1.13C48.22,25.09,49.86,25.78,50.71,25.64ZM65,45.49a.86.86,0,0,1-.85.88c-1.21.22-1.4-.49-1.48-1.29a5.23,5.23,0,0,0-.08-.93C61.41,37.46,59,35,52.14,33.48c-1-.22-2.58-.11-2.3-1.62s1.65-1,2.74-.85c6.85.85,12.48,6.69,12.45,13.13C65,44.53,65.05,45.08,65,45.49Zm-5.7-.88a1.31,1.31,0,0,1-.6.16,1.07,1.07,0,0,1-.93-.36,1.9,1.9,0,0,1-.33-.93,4.94,4.94,0,0,0-4.61-4.8c-.85-.14-1.7-.44-1.29-1.53.27-.77,1-.85,1.7-.85,3-.08,6.61,3.51,6.55,6.61A1.86,1.86,0,0,1,59.27,44.61Zm11.38,19.3c-1.18,3.24-5.24,6.55-8.72,6.5a12.59,12.59,0,0,1-2.33-.63C47.15,64.55,37.5,56.54,30.94,45.57a59,59,0,0,1-4-8c-2.11-5.07.08-9.35,5.43-11.13a4.53,4.53,0,0,1,2.82,0c2.3.85,8.06,8.61,8.17,10.94.08,1.78-1.12,2.74-2.36,3.54A3.77,3.77,0,0,0,39,44.39a6.35,6.35,0,0,0,.58,2.19,20.55,20.55,0,0,0,11,10.5c1.78.8,3.51.71,4.74-1.1,2.17-3.21,4.85-3,7.79-1.07,1.43,1,3,2,4.36,3.1C69.39,59.56,71.8,60.76,70.65,63.91Z" />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link link" href="#">
+            <svg data-name="Layer 4" id="Layer_4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <title />
+              <path
+                d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM392.363,342.9H359.878a23.41,23.41,0,0,1-18.318-8.8c-9.742-12.231-28.934-33.918-49.085-43.233a7.666,7.666,0,0,0-10.916,6.928v32.128A12.974,12.974,0,0,1,268.585,342.9H253.564c-19.534,0-61.6-11.891-95.119-60.719-28.56-41.6-41.291-73.84-48.715-99.98a10.3,10.3,0,0,1,9.922-13.093h32.862a15.226,15.226,0,0,1,14.6,10.861c6.111,20.439,21.939,64.53,49.917,86.486a5.788,5.788,0,0,0,9.371-4.54V210.449c0-10.171-4.408-20.347-11.288-28.3a7.878,7.878,0,0,1,5.946-13.046h50.666a9.838,9.838,0,0,1,9.838,9.837v69.325a5.468,5.468,0,0,0,8.636,4.456c9.3-6.62,17.265-16.4,24.591-27.393,9.22-13.828,20.471-36.686,26.115-48.549A13.457,13.457,0,0,1,353.06,169.1H388.9a8.788,8.788,0,0,1,7.873,12.7c-9.044,18.14-26.659,51.418-43.235,70.942a13.877,13.877,0,0,0,1.623,19.54c10.805,9.232,27.673,26.3,45.859,54.729A10.305,10.305,0,0,1,392.363,342.9Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__list footer__contact list-reset">
+        <li class="footer__item">
+          <a href="tel:+375123456789" class="footer__link footer__link-contact link">
+            <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1600 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z" />
+            </svg>
+            <span>+37512 345 67 89</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="mailto:farzicia@list.ru" class="footer__link footer__link-contact link">
+            <svg version="1.1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"
+              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <title />
+              <defs />
+              <g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1">
+                <g id="mail">
+                  <path
+                    d="M30,60 C46.5685433,60 60,46.5685433 60,30 C60,13.4314567 46.5685433,0 30,0 C13.4314567,0 0,13.4314567 0,30 C0,46.5685433 13.4314567,60 30,60 Z"
+                    fill="#000000" />
+                  <path
+                    d="M30,33.4615385 L47.3076923,18.4615385 L12.6923077,18.4615385 L30,33.4615385 Z M25.3251765,31.8010536 L30,35.6382399 L34.6015813,31.8010536 L47.3076923,42.6923077 L12.6923077,42.6923077 L25.3251765,31.8010536 Z M11.5384615,41.5384615 L11.5384615,19.6153846 L24.2307692,30.5769231 L11.5384615,41.5384615 Z M48.4615385,41.5384615 L48.4615385,19.6153846 L35.7692308,30.5769231 L48.4615385,41.5384615 Z"
+                    fill="#FFFFFF" />
+                </g>
+              </g>
+            </svg>
+            <span>farzicia@list.ru</span>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copyright">&copy Елена Гапанёнок, 2023</p>
+      <ul class="footer__list footer__developer list-reset">
+        <li class="footer__item">
+          Developer:
+          <a class="footer__link link" href="https://t.me/Kyoto430" target="_blank">&nbsp;Ruslan Prakapets</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
