@@ -8,6 +8,12 @@
   justify-content: space-between;
 }
 
+.header__logo {
+  display: flex;
+  align-items: center;
+  max-width: 260px;
+}
+
 .header__button {
   padding: 18px 40px;
 
@@ -20,6 +26,14 @@
   text-transform: uppercase;
 
   cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.header__button:hover {
+  color: var(--color-light-xl);
+
+  background-color: var(--color-primary-light);
 }
 
 .header__menu {
@@ -35,5 +49,12 @@
 }
 
 .menu__link {
+  font-weight: 500;
   text-transform: uppercase;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__link:hover {
+  color: var(--color-primary-light);
 }
