@@ -157,7 +157,7 @@ body {
 
   content: '';
 
-  background: url('/assets/img/main/hero-01.svg');
+  background: url('../img/main/hero-01.svg');
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,7 +213,7 @@ body {
   height: 42px;
   padding: 0;
 
-  background: var(--color-light-l) url('/assets/img/icons/arrow.png') no-repeat
+  background: var(--color-light-l) url('../img/icons/arrow.png') no-repeat
     center/16px;
   border-radius: 50%;
   border: 0;
@@ -228,7 +228,7 @@ body {
 /*==================== ANIMATION ====================*/
 .fade-animation {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(1%);
 }
 
 .fade-animation.element-show {

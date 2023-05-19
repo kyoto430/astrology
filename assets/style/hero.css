@@ -1,5 +1,5 @@
 .hero {
-  max-height: 100vh;
+  max-height: 100%;
 }
 
 .hero__container {
@@ -79,6 +79,8 @@
 /* MEDIA */
 
 @media (max-width: 1240px) {
+
+
   .hero__container {
     gap: 25px;
   }
@@ -112,10 +114,6 @@
 }
 
 @media (max-width: 425px){
-  .hero {
-    max-height: 100%;
-  }
-
   .hero__image {
     max-width: 80%;
     border-radius: 5px;
