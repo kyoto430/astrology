@@ -366,7 +366,7 @@ body {
   }
 
   :root {
-    --width-slide: 100%;
+    --width-slide: 400px;
     --height-slide: 400px;
   }
 }
