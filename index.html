@@ -12,52 +12,70 @@
   <link rel="stylesheet" href="assets/style/hero.css">
   <link rel="stylesheet" href="assets/style/services.css">
   <link rel="stylesheet" href="assets/style/advantages.css">
-  <link rel="stylesheet" href="assets/style/interaction.css">
+  <link rel="stylesheet" href="assets/style/about.css">
+  <link rel="stylesheet" href="assets/style/popup.css">
   <link rel="stylesheet" href="assets/style/footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script src="./assets/js/index.js" defer></script>
+
+  <link rel="icon" type="image/x-icon" href="./assets/img/icons/favicon.ico">
+
+  <title>Консультации астролога, астропсихолога в Минске</title>
+  <meta name="description"
+    content="Меня зовут Елена - я астролог, астропсихолог. Мой опыт работы психологом более 10 лет. Индивидуальные консультации очно в Минске или онлайн.">
+  <meta name="keywords" content="астролог, астропсихолог, психолог, консультация, помощь, Минск, Беларусь">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container header__container">
       <a href="#">
-        <img class="header__logo" src="assets/img/logo.svg"
-          alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг" />
+        <img class="header__logo" src="./assets/img/logo.svg"
+          alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг">
       </a>
       <nav class="header__nav">
         <ul class="header__menu list-reset">
           <li class="menu__item">
-            <a class="menu__link link" href="#">Консультации</a>
+            <a class="menu__link link" href="#services">Консультации</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link link" href="#">Обо мне</a>
+            <a class="menu__link link" href="#about">Обо мне</a>
           </li>
           <li class="menu__item">
             <a class="menu__link link" href="#footer">Контакты</a>
           </li>
+          <li class="menu__item">
+            <a href="#popup-form" class="header__button button popup-link">Получить консультацию</a>
+          </li>
         </ul>
       </nav>
-      <button class="header__button button">Получить консультацию</button>
+      <div class="overlay"></div>
+      <div class="menu__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero section-offset">
+    <section class="hero section-offset fade-animation">
       <div class="container hero__container">
         <div class="hero__content background-block">
           <h1 class="hero__title">Астролог <span class="title-color">Елена&nbsp;Гапанёнок</span></h1>
           <p class="hero__description">Астрология, применяемая на практике</p>
-          <a href="#" class="hero__link-btn button link">Обо мне</a>
-
+          <a href="#about" class="hero__link-btn button link">Обо мне</a>
         </div>
         <div class="hero__image-wrapper">
-          <img class="hero__image" src="/assets/img/about-01.jpg" alt="Аватар" />
-
+          <img class="hero__image" src="./assets/img/main/avatar-01-min.jpg"
+            alt="Аватар Елены, молодая девушка с длинными русыми волосами, голубыми глазами, одета в чёрно-серое платье и зелёное пальто">
         </div>
         <ul class="hero__list hero__social list-reset">
           <li class="hero__item">
-            <a class="hero__link link" href="#">
+            <a class="hero__link link" href="https://instagram.com/astrowiz_lena" target="_blank"
+              aria-label="Инстаграм">
               <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <title />
                 <path
@@ -69,7 +87,7 @@
             </a>
           </li>
           <li class="hero__item">
-            <a class="hero__link link" href="#">
+            <a class="hero__link link" href="https://t.me/Kyoto430" target="_blank" aria-label="Телеграм">
               <svg data-name="Layer 2" id="Layer_2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <title />
                 <path
@@ -78,7 +96,7 @@
             </a>
           </li>
           <li class="hero__item">
-            <a class="hero__link link" href="#">
+            <a class="hero__link link" href="viber://chat?number=%2B375339009588" target="_blank" aria-label="Вайбер">
               <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
                 <title />
                 <g data-name="Layer 3" id="Layer_3">
@@ -91,7 +109,7 @@
             </a>
           </li>
           <li class="hero__item">
-            <a class="hero__link link" href="#">
+            <a class="hero__link link" href="https://vk.com/id69853749" target="_blank" aria-label="Вконтакте">
               <svg data-name="Layer 4" id="Layer_4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <title />
                 <path
@@ -102,31 +120,32 @@
         </ul>
       </div>
     </section>
-    <section class="services section-offset">
+    <section class="services section-offset" id="services">
       <div class="container services__container">
         <div class="services__content">
-          <h2 class="services__title">Консультации</h2>
-          <p class="services__description">
+          <h2 class="services__title color-title fade-animation">Консультации</h2>
+          <p class="services__description fade-animation">
             Конкретные вопросы, которые мы будем разбирать, зависят от ваших
             личностных потребностей и целей. <br> Мы можем фокусироваться на конкретных областях жизни, которые вам
             интересны, или рассматривать карту как единое целое, чтобы получить полное представление о вашей
             личности и жизни.
           </p>
           <ul class="services__list list-reset">
-            <li class="services__item">
+            <li class="services__item fade-animation">
               <div class="service__item-wrapper">
-                <h3 class="service__item-title">Анализ натальной карты</h3>
+                <h3 class="service__item-title color-primary">Анализ натальной карты</h3>
                 <div class="service__item-wrapper">
-                  <h4 class="service__item-subtitle">Какие вопросы разбираем?</h4>
+                  <h4 class="service__item-subtitle color-secondary">Какие вопросы разбираем?</h4>
                   <div class="service__item-description">
                     <p>Анализ натальной карты может включать в себя множество различных вопросов, которые могут помочь
                       лучше понять ваш характер, способности, потребности и предназначение в жизни.
                     </p>
-                    <p>Некотрые из вопросов,
+                    <p class="color-secondary">Некотрые из вопросов,
                       которые мы можем рассмотреть в анализе натальной карты, включают:
                     </p>
-                    <ul>
-                      <li>Личностные качества и характеристики, такие как стиль мышления, коммуникативные способности,
+                    <ul class="service__list">
+                      <li>
+                        Личностные качества и характеристики, такие как стиль мышления, коммуникативные способности,
                         управление эмоциями, творческий потенциал и т.д.
                       </li>
                       <li>Сильные и слабые стороны вашей личности и как они могут влять на вашу жизнь и достижения.
@@ -147,20 +166,30 @@
                     </ul>
                   </div>
                 </div>
+                <div class="service__price-wrapper">
+                  <p class="service__price">Стоимость консультации: <span class="color-primary">50 белорусских рублей</span>
+                  </p>
+                  <p class="service__format">Формат консультации: <span class="color-primary">личная встреча или
+                      онлайн</span>
+                  </p>
+                  <p class="service__format">Срок выполнения: <span class="color-primary">2 - 5 дней</span>
+                  </p>
+                  <a href="#popup-form" class="service__button button popup-link">Заказать</a>
+                </div>
               </div>
             </li>
-            <li class="services__item">
+            <li class="services__item fade-animation">
               <div class="service__item-wrapper">
-                <h3 class="service__item-title">Анализ детской натальной карты</h3>
+                <h3 class="service__item-title color-primary">Анализ детской натальной карты</h3>
                 <div class="service__item-wrapper">
-                  <h4 class="service__item-subtitle">Какие вопросы разбираем?</h4>
+                  <h4 class="service__item-subtitle color-secondary">Какие вопросы разбираем?</h4>
                   <div class="service__item-description">
                     <p>
                       При анализе детской натальной карты мы можем обсудить множество вопросов, которые связаны с
                       особенностями характера, талантами и потенциалом вашего ребенка.
                     </p>
-                    <p>Например,мы можем обсудить:</p>
-                    <ul>
+                    <p class="color-secondary">Например, мы можем обсудить:</p>
+                    <ul class="service__list">
                       <li> Какие сильные и слабые стороны личности вашего ребенка могут проявляться на протяжении жизни.
                       </li>
                       <li> Какие потенциальные трудности и препятствия могут возникнуть на его пути и как с ними
@@ -178,23 +207,34 @@
                     </ul>
                   </div>
                 </div>
+                <div class="service__price-wrapper">
+                  <p class="service__price">Стоимость консультации: <span class="color-primary">50 белорусских
+                      рублей</span>
+                  </p>
+                  <p class="service__format">Формат консультации: <span class="color-primary">личная встреча или
+                      онлайн</span>
+                  </p>
+                  <p class="service__format">Срок выполнения: <span class="color-primary">2 - 5 дней</span>
+                  </p>
+                  <a href="#popup-form" class="service__button button popup-link">Заказать</a>
+                </div>
               </div>
             </li>
-            <li class="services__item">
+            <li class="services__item fade-animation">
               <div class="service__item-wrapper">
-                <h3 class="service__item-title">Финансы и карьера</h3>
+                <h3 class="service__item-title color-primary">Финансы и карьера</h3>
                 <div class="service__item-wrapper">
-                  <h4 class="service__item-subtitle">Какие вопросы разбираем?</h4>
+                  <h4 class="service__item-subtitle color-secondary">Какие вопросы разбираем?</h4>
                   <div class="service__item-description">
                     <p>
                       При анализе натальной карты в сфере финансов и карьеры мы можем обсудить множество вопросов,
                       которые
                       могут помочь вам определить свой потенциал и наилучшие возможности для развития в этих облостях.
                     </p>
-                    <p>
+                    <p class="color-secondary">
                       Например, мы можем обсудить:
                     </p>
-                    <ul>
+                    <ul class="service__list">
                       <li>Какие таланты и способности у вас есть, которые могут быть полезны в вашей карьере и
                         финансовой
                         жизни.
@@ -213,19 +253,30 @@
                     </ul>
                   </div>
                 </div>
+                <div class="service__price-wrapper">
+                  <p class="service__price">Стоимость консультации: <span class="color-primary">50 белорусских
+                      рублей</span>
+                  </p>
+                  <p class="service__format">Формат консультации: <span class="color-primary">личная встреча или
+                      онлайн</span>
+                  </p>
+                  <p class="service__format">Срок выполнения: <span class="color-primary">2 - 5 дней</span>
+                  </p>
+                  <a href="#popup-form" class="service__button button popup-link">Заказать</a>
+                </div>
               </div>
             </li>
-            <li class="services__item">
+            <li class="services__item fade-animation">
               <div class="service__item-wrapper">
-                <h3 class="service__item-title">Отношения</h3>
+                <h3 class="service__item-title color-primary">Отношения</h3>
                 <div class="service__item-wrapper">
-                  <h4 class="service__item-subtitle">Какие вопросы разбираем?</h4>
+                  <h4 class="service__item-subtitle color-secondary">Какие вопросы разбираем?</h4>
                   <div class="service__item-description">
                     <p>При анализе натальной карты в сфере отношений мы можем обсудить множество вопросов, которые могут
                       помочь вам лучше понять себя и свои отношения с другими людьми.
                     </p>
-                    <p>Например, мы можем обсудить:</p>
-                    <ul>
+                    <p class="color-secondary">Например, мы можем обсудить:</p>
+                    <ul class="service__list">
                       <li>Ваш стиль взаимодействия в отношениях и как он может влять на ваши отношения с другими людьми.
                       </li>
                       <li>Какие личностные качества и потребности важны для вас в отношениях и как они могут
@@ -245,44 +296,29 @@
                     </ul>
                   </div>
                 </div>
+                <div class="service__price-wrapper">
+                  <p class="service__price">Стоимость консультации: <span class="color-primary">50 белорусских
+                      рублей</span></p>
+                  <p class="service__format">Формат консультации: <span class="color-primary">личная встреча или
+                      онлайн</span></p>
+                  <p class="service__format">Срок выполнения: <span class="color-primary">2 - 5 дней</span>
+                  </p>
+                  <a href="#popup-form" class="service__button button popup-link">Заказать</a>
+                </div>
               </div>
             </li>
           </ul>
         </div>
-        <div class="services__form">
-          <div class="services__form-left">
-            <h3 class="services__form-title">С чего начать?</h3>
-            <form class="action__form">
-              <fieldset class="action__fieldset">
-                <label class="action__wrapper-input">
-                  <span class="action__text">Ваше имя:</span>
-                  <input class="action__input-name" type="text" name="name" required>
-                </label>
-                <label class="action__wrapper-input">
-                  <span class="action__text">Ваш телефон:</span>
-                  <input class="action__input-phone" type="tel" name="phone" required>
-                </label>
-              </fieldset>
-              <button class="button button__submit" type="submit">Отправить</button>
-            </form>
-          </div>
-          <div class="services__form-right">
-            <div class="services__form-wrapper">
-              <span class="services__form-text">
-                Помогу определиться с выбором и разъясню детали вопросов
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-    <section class="advantages section-offset">
+    <section class="advantages section-offset fade-animation">
       <div class="container advantages__container">
-        <h2 class="advantages__title">Преимущества</h2>
+        <h2 class="advantages__title color-primary">Преимущества</h2>
         <ul class="advantages__list list-reset">
           <li class="advantages__item">
             <div class="advantages__item-wrapper">
-              <img class="advantages__item-img" src="/assets/img/check.svg" alt="" />
+              <img class="advantages__item-img" src="./assets/img/icons/experience.png"
+                alt="Иконка, опыт работы, векторный  рисунок папки в виде досье с оранжевой медалью в которой находиться жёлтая звезда">
               <div class="advantages__item-description">
                 <h3 class="advantages__item-title">Опыт работы</h3>
                 <span class="advantages__item-text">более 10 лет работы психологом</span>
@@ -291,7 +327,8 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__item-wrapper">
-              <img class="advantages__item-img" src="/assets/img/check.svg" alt="" />
+              <img class="advantages__item-img" src="./assets/img/icons/famous.png"
+                alt="Иконка, индивидуальный подход, векторный рисунок человека с жёлтой звездой за спиной">
               <div class="advantages__item-description">
                 <h3 class="advantages__item-title">Индивидуальный подход</h3>
                 <span class="advantages__item-text">разработаю индивидуальный план действий, который будет
@@ -301,7 +338,8 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__item-wrapper">
-              <img class="advantages__item-img" src="/assets/img/check.svg" alt="" />
+              <img class="advantages__item-img" src="./assets/img/icons/help.png"
+                alt="Иконка, поддержка и советы, векторный рисунок двух ладоней сжатых друг с другом">
               <div class="advantages__item-description">
                 <h3 class="advantages__item-title">Поддержка и советы</h3>
                 <span class="advantages__item-text">Я всегда доступна для констультаций и поддержки, когда вам это
@@ -311,7 +349,8 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__item-wrapper">
-              <img class="advantages__item-img" src="/assets/img/check.svg" alt="" />
+              <img class="advantages__item-img" src="./assets/img/icons/calm.png"
+                alt="Иконка, возможность лучшего самопознания, векторный рисунок человека с закрытыми глазами в позе лотоса">
               <div class="advantages__item-description">
                 <h3 class="advantages__item-title">Возможность лучшего самопознания</h3>
                 <span class="advantages__item-text">работа со мной поможет вам лучше понять себя и
@@ -321,7 +360,8 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__item-wrapper">
-              <img class="advantages__item-img" src="/assets/img/check.svg" alt="" />
+              <img class="advantages__item-img" src="./assets/img/icons/cyber-security.png"
+                alt="Иконка, конфиденциальность информации, векторный рисунок бирюзового щита с жёлтым замком внутри">
               <div class="advantages__item-description">
                 <h3 class="advantages__item-title">Конфиденциальность информации</h3>
                 <span class="advantages__item-text">данные предоставленные для анализа не передаются
@@ -332,57 +372,143 @@
         </ul>
       </div>
     </section>
-    <section class="interaction section-offset">
-      <div class="container interaction__container">
-        <h2 class="interaction__title">Как мы общаемся?</h2>
-        <ul class="interaction__list list-reset">
-          <li class="interaction__item">Связываемся с вами по телефону, почте или с помощью месседжеров</li>
-          <li class="interaction__item">Оговариваем интересующие вас вопросы.</li>
-          <li class="interaction__item">Определяем комфортную для вас дату и время консультации, определяем формат
-            встречи</li>
-          <li class="interaction__item">Прорабатываем ваши вопросы. В конце консультации вы получаете собственные
-            уникальные рекомендации в текстовом или электронном виде</li>
-        </ul>
-      </div>
-    </section>
-    <section class="about section-offset">
+    <section class="about section-offset fade-animation" id="about">
       <div class="container about__container">
+        <h2 class="about__title color-primary">Обо мне</h2>
         <div class="about__content">
-          <h2 class="about__title">Обо мне</h2>
-          <p class="about__text">Меня зовут Лена, я психолог, и очень люблю психологию (да и опыта уже более 10 лет), но
-            астрология покорила моё сердце. В последний год я много учусь, углубляясь в изучение астрологии, прошла
-            несколько курсов. Мне понадобилось много времени и разных осознаний, чтобы с серьезностью принять своё
-            увлечение и тем более рассказать о нем. Я профессионально анализирую натальные карты, чтобы помочь людям
-            понять себя и свои жизненные задачи. Моя основная цель - помочь вам прнимать осознанные решения и создавать
-            более счастливую и удовлетворительную жизнь. Я использую современный полход к астрологии и базируюсь на
-            своем богатом опыте и знаниях, чтобы помочь вам раскрыть свой потенциал и справиться с жизненными
-            трудностями. Я буду рада стать вашим проводником на пути к переменам.
-          </p>
+          <div class="about__text">
+            <p>Меня зовут <b class="color-secondary">Лена</b>, я психолог, и очень люблю психологию (<strong
+                class="color-secondary">опыта уже более 10 лет</strong>), но
+              астрология покорила моё сердце. </p>
+            <p>В последний год я много учусь, углубляясь в изучение астрологии, прошла
+              несколько курсов. Мне понадобилось много времени и разных осознаний, чтобы с серьезностью принять своё
+              увлечение и тем более рассказать о нем.</p>
+            <p>Я профессионально анализирую натальные карты, чтобы помочь людям
+              понять себя и свои жизненные задачи.
+            </p>
+            <p><strong class="color-secondary">Моя основная цель</strong> - помочь вам прнимать осознанные решения и
+              создавать
+              более счастливую и удовлетворительную жизнь.</p>
+            <p>Я использую современный полход к астрологии и базируюсь на
+              своем богатом опыте и знаниях, чтобы помочь вам раскрыть свой потенциал и справиться с жизненными
+              трудностями.</p>
+            <p class="color-secondary text-center"><strong>Я буду рада стать вашим проводником на пути к
+                переменам!</strong></p>
+          </div>
           <div class="about__image">
-            <img src="assets/img/about-01.jpg" alt="" />
+            <!-- <img src="./assets/img/main/photo-02.jpg" alt=""> -->
+            <div class="slider__block">
+              <div class="about__slider swiper">
+                <div class="about__slider-wrapper swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slider__image" style="background-image: url('./assets/img/main/photo-01.jpg');"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__image" style="background-image: url('./assets/img/main/photo-02.jpg');"></div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__image" style="background-image: url('./assets/img/main/avatar-01.jpg');"></div>
+                  </div>
+                </div>
+                <div class="slider__buttons">
+                  <button class="slider__btn slider__btn-prev">
+                  </button>
+                  <button class="slider__btn slider__btn-next">
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="slider__wrapper">
-        <div class="filling">
-          <div class="filling">
-            <div class="slider__image filling" style="background-image: url('./assets/img/avatar.jpg');"></div>
-          </div>
-          <button class="slider__btn slider__btn-prev"></button>
-          <button class="slider__btn slider__next"></button>
         </div>
       </div>
     </section>
   </main>
 
+  <div id="popup-form" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <a href="#services" class="popup__close close-popup"></a>
+        <div class="popup__content-right">
+          <h3 class="popup__title color-primary">С чего начать?</h3>
+          <h4 class="popup__subtitle color-secondary">Помогу определиться с выбором и разъясню детали вопросов</h4>
+          <p class="popup__description">Для получения консультации заполните форму или напишите мне</p>
+          <ul class="list-reset popup__list">
+            <li class="hero__item">
+              <a class="hero__link link" href="https://instagram.com/astrowiz_lena" target="_blank"
+                aria-label="Инстаграм">
+                <svg data-name="Layer 1-1" id="Layer_1-1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <path
+                    d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
+                  <path d="M256,211.545A44.455,44.455,0,1,0,300.455,256,44.455,44.455,0,0,0,256,211.545Z" />
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.333,312.5A76.836,76.836,0,0,1,312.5,389.333H199.5A76.837,76.837,0,0,1,122.666,312.5V199.5A76.836,76.836,0,0,1,199.5,122.667H312.5A76.836,76.836,0,0,1,389.333,199.5Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link link" href="https://t.me/Kyoto430" target="_blank" aria-label="Телеграм">
+                <svg data-name="Layer 2-2" id="Layer_2-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.059,161.936,343.591,379a16.007,16.007,0,0,1-25.177,9.593l-66.136-48.861-40.068,37.8a5.429,5.429,0,0,1-7.74-.294l-.861-.946,6.962-67.375L336.055,194.266a3.358,3.358,0,0,0-4.061-5.317L171.515,290.519,102.4,267.307a9.393,9.393,0,0,1-.32-17.694L372.5,147.744A12.441,12.441,0,0,1,389.059,161.936Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link link" href="viber://chat?number=%2B375339009588" target="_blank" aria-label="Вайбер">
+                <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <g data-name="Layer 3-2" id="Layer_3-2">
+                    <g data-name="Layer 3-2" id="Layer_3-3-2">
+                      <path
+                        d="M48,0A48,48,0,1,0,96,48,48,48,0,0,0,48,0Zm2.71,25.64c10.69.33,19.93,10,19.8,20.37a4.15,4.15,0,0,0,.05.79c0,.85-.05,1.73-1.23,1.7-1.34,0-1.15-1.32-1.23-2.33V45.9c-1.43-11-6.55-16.21-17.71-17.9-.93-.11-2.33.05-2.3-1.13C48.22,25.09,49.86,25.78,50.71,25.64ZM65,45.49a.86.86,0,0,1-.85.88c-1.21.22-1.4-.49-1.48-1.29a5.23,5.23,0,0,0-.08-.93C61.41,37.46,59,35,52.14,33.48c-1-.22-2.58-.11-2.3-1.62s1.65-1,2.74-.85c6.85.85,12.48,6.69,12.45,13.13C65,44.53,65.05,45.08,65,45.49Zm-5.7-.88a1.31,1.31,0,0,1-.6.16,1.07,1.07,0,0,1-.93-.36,1.9,1.9,0,0,1-.33-.93,4.94,4.94,0,0,0-4.61-4.8c-.85-.14-1.7-.44-1.29-1.53.27-.77,1-.85,1.7-.85,3-.08,6.61,3.51,6.55,6.61A1.86,1.86,0,0,1,59.27,44.61Zm11.38,19.3c-1.18,3.24-5.24,6.55-8.72,6.5a12.59,12.59,0,0,1-2.33-.63C47.15,64.55,37.5,56.54,30.94,45.57a59,59,0,0,1-4-8c-2.11-5.07.08-9.35,5.43-11.13a4.53,4.53,0,0,1,2.82,0c2.3.85,8.06,8.61,8.17,10.94.08,1.78-1.12,2.74-2.36,3.54A3.77,3.77,0,0,0,39,44.39a6.35,6.35,0,0,0,.58,2.19,20.55,20.55,0,0,0,11,10.5c1.78.8,3.51.71,4.74-1.1,2.17-3.21,4.85-3,7.79-1.07,1.43,1,3,2,4.36,3.1C69.39,59.56,71.8,60.76,70.65,63.91Z" />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="hero__item">
+              <a class="hero__link link" href="https://vk.com/id69853749" target="_blank" aria-label="Вконтакте">
+                <svg data-name="Layer 4-4" id="Layer_4-4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <title />
+                  <path
+                    d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM392.363,342.9H359.878a23.41,23.41,0,0,1-18.318-8.8c-9.742-12.231-28.934-33.918-49.085-43.233a7.666,7.666,0,0,0-10.916,6.928v32.128A12.974,12.974,0,0,1,268.585,342.9H253.564c-19.534,0-61.6-11.891-95.119-60.719-28.56-41.6-41.291-73.84-48.715-99.98a10.3,10.3,0,0,1,9.922-13.093h32.862a15.226,15.226,0,0,1,14.6,10.861c6.111,20.439,21.939,64.53,49.917,86.486a5.788,5.788,0,0,0,9.371-4.54V210.449c0-10.171-4.408-20.347-11.288-28.3a7.878,7.878,0,0,1,5.946-13.046h50.666a9.838,9.838,0,0,1,9.838,9.837v69.325a5.468,5.468,0,0,0,8.636,4.456c9.3-6.62,17.265-16.4,24.591-27.393,9.22-13.828,20.471-36.686,26.115-48.549A13.457,13.457,0,0,1,353.06,169.1H388.9a8.788,8.788,0,0,1,7.873,12.7c-9.044,18.14-26.659,51.418-43.235,70.942a13.877,13.877,0,0,0,1.623,19.54c10.805,9.232,27.673,26.3,45.859,54.729A10.305,10.305,0,0,1,392.363,342.9Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <form class="action__form">
+            <fieldset class="action__fieldset">
+              <label class="action__wrapper-input">
+                <input class="action__input-name" type="text" name="name" placeholder="Ваше имя" required>
+              </label>
+              <label class="action__wrapper-input">
+                <input class="action__input-phone" type="tel" name="phone" placeholder="Ваш телефон" required>
+              </label>
+              <label class="action__wrapper-input">
+                <input class="action__input-question" type="text" name="question" placeholder="Ваш вопрос">
+              </label>
+            </fieldset>
+            <button class="button button__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <footer class="footer section-offset" id="footer">
     <div class="container footer__container">
-      <img class="footer__logo" src="assets/img/logo.svg"
-        alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг" />
+      <a class="footer__logo" href="#header">
+        <img class="header__logo" src="assets/img/logo.svg"
+          alt="Логотип - астролог, психолог Елена Гапанёнок. Большой зелёный круг содержащий в себе маленький белый круг">
+      </a>
       <ul class="footer__list footer__social list-reset">
         <li class="footer__item">
-          <a class="footer__link link" href="#">
-            <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <a class="footer__link link" href="https://instagram.com/astrowiz_lena" target="_blank"
+            aria-label="Инстаграм">
+            <svg data-name="Layer 1-3" id="Layer_1-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <title />
               <path
                 d="M314.757,147.525H197.243a49.717,49.717,0,0,0-49.718,49.718V314.757a49.718,49.718,0,0,0,49.718,49.718H314.757a49.718,49.718,0,0,0,49.717-49.718V197.243A49.717,49.717,0,0,0,314.757,147.525ZM256,324.391A68.391,68.391,0,1,1,324.391,256,68.391,68.391,0,0,1,256,324.391ZM327.242,201.58a16.271,16.271,0,1,1,16.27-16.271A16.271,16.271,0,0,1,327.242,201.58Z" />
@@ -393,8 +519,8 @@
           </a>
         </li>
         <li class="footer__item">
-          <a class="footer__link link" href="#">
-            <svg data-name="Layer 2" id="Layer_2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <a class="footer__link link" href="https://t.me/Kyoto430" target="_blank" aria-label="Телеграм">
+            <svg data-name="Layer 2-3" id="Layer_2-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <title />
               <path
                 d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM389.059,161.936,343.591,379a16.007,16.007,0,0,1-25.177,9.593l-66.136-48.861-40.068,37.8a5.429,5.429,0,0,1-7.74-.294l-.861-.946,6.962-67.375L336.055,194.266a3.358,3.358,0,0,0-4.061-5.317L171.515,290.519,102.4,267.307a9.393,9.393,0,0,1-.32-17.694L372.5,147.744A12.441,12.441,0,0,1,389.059,161.936Z" />
@@ -402,11 +528,11 @@
           </a>
         </li>
         <li class="footer__item">
-          <a class="footer__link link" href="#">
+          <a class="footer__link link" href="viber://chat?number=%2B375339009588" target="_blank" aria-label="Вайбер">
             <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
               <title />
-              <g data-name="Layer 3" id="Layer_3">
-                <g data-name="Layer 3" id="Layer_3-3">
+              <g data-name="Layer 3-3" id="Layer_3-3-1">
+                <g data-name="Layer 3-3" id="Layer_3-3-3">
                   <path
                     d="M48,0A48,48,0,1,0,96,48,48,48,0,0,0,48,0Zm2.71,25.64c10.69.33,19.93,10,19.8,20.37a4.15,4.15,0,0,0,.05.79c0,.85-.05,1.73-1.23,1.7-1.34,0-1.15-1.32-1.23-2.33V45.9c-1.43-11-6.55-16.21-17.71-17.9-.93-.11-2.33.05-2.3-1.13C48.22,25.09,49.86,25.78,50.71,25.64ZM65,45.49a.86.86,0,0,1-.85.88c-1.21.22-1.4-.49-1.48-1.29a5.23,5.23,0,0,0-.08-.93C61.41,37.46,59,35,52.14,33.48c-1-.22-2.58-.11-2.3-1.62s1.65-1,2.74-.85c6.85.85,12.48,6.69,12.45,13.13C65,44.53,65.05,45.08,65,45.49Zm-5.7-.88a1.31,1.31,0,0,1-.6.16,1.07,1.07,0,0,1-.93-.36,1.9,1.9,0,0,1-.33-.93,4.94,4.94,0,0,0-4.61-4.8c-.85-.14-1.7-.44-1.29-1.53.27-.77,1-.85,1.7-.85,3-.08,6.61,3.51,6.55,6.61A1.86,1.86,0,0,1,59.27,44.61Zm11.38,19.3c-1.18,3.24-5.24,6.55-8.72,6.5a12.59,12.59,0,0,1-2.33-.63C47.15,64.55,37.5,56.54,30.94,45.57a59,59,0,0,1-4-8c-2.11-5.07.08-9.35,5.43-11.13a4.53,4.53,0,0,1,2.82,0c2.3.85,8.06,8.61,8.17,10.94.08,1.78-1.12,2.74-2.36,3.54A3.77,3.77,0,0,0,39,44.39a6.35,6.35,0,0,0,.58,2.19,20.55,20.55,0,0,0,11,10.5c1.78.8,3.51.71,4.74-1.1,2.17-3.21,4.85-3,7.79-1.07,1.43,1,3,2,4.36,3.1C69.39,59.56,71.8,60.76,70.65,63.91Z" />
                 </g>
@@ -415,8 +541,8 @@
           </a>
         </li>
         <li class="footer__item">
-          <a class="footer__link link" href="#">
-            <svg data-name="Layer 4" id="Layer_4" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <a class="footer__link link" href="https://vk.com/id69853749" target="_blank" aria-label="Вконтакте">
+            <svg data-name="Layer 4-3" id="Layer_4-3" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <title />
               <path
                 d="M256,0C114.615,0,0,114.615,0,256S114.615,512,256,512,512,397.385,512,256,397.385,0,256,0ZM392.363,342.9H359.878a23.41,23.41,0,0,1-18.318-8.8c-9.742-12.231-28.934-33.918-49.085-43.233a7.666,7.666,0,0,0-10.916,6.928v32.128A12.974,12.974,0,0,1,268.585,342.9H253.564c-19.534,0-61.6-11.891-95.119-60.719-28.56-41.6-41.291-73.84-48.715-99.98a10.3,10.3,0,0,1,9.922-13.093h32.862a15.226,15.226,0,0,1,14.6,10.861c6.111,20.439,21.939,64.53,49.917,86.486a5.788,5.788,0,0,0,9.371-4.54V210.449c0-10.171-4.408-20.347-11.288-28.3a7.878,7.878,0,0,1,5.946-13.046h50.666a9.838,9.838,0,0,1,9.838,9.837v69.325a5.468,5.468,0,0,0,8.636,4.456c9.3-6.62,17.265-16.4,24.591-27.393,9.22-13.828,20.471-36.686,26.115-48.549A13.457,13.457,0,0,1,353.06,169.1H388.9a8.788,8.788,0,0,1,7.873,12.7c-9.044,18.14-26.659,51.418-43.235,70.942a13.877,13.877,0,0,0,1.623,19.54c10.805,9.232,27.673,26.3,45.859,54.729A10.305,10.305,0,0,1,392.363,342.9Z" />
@@ -436,8 +562,7 @@
         </li>
         <li class="footer__item">
           <a href="mailto:farzicia@list.ru" class="footer__link footer__link-contact link">
-            <svg version="1.1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"
-              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg version="1.1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
               <title />
               <defs />
               <g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1">
@@ -455,15 +580,16 @@
           </a>
         </li>
       </ul>
-      <p class="footer__copyright">&copy Елена Гапанёнок, 2023</p>
+      <p class="footer__copyright">&copy; Елена Гапанёнок, 2023</p>
       <ul class="footer__list footer__developer list-reset">
         <li class="footer__item">
-          Developer:
-          <a class="footer__link link" href="https://t.me/Kyoto430" target="_blank">&nbsp;Ruslan Prakapets</a>
+          Разработчик:
+          <a class="footer__link link" href="https://t.me/Kyoto430" target="_blank">&nbsp;Руслан Прокопец</a>
         </li>
       </ul>
     </div>
   </footer>
+
 </body>
 
 </html>

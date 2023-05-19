@@ -1,5 +1,6 @@
 .header {
   padding: 18px 0;
+  background-color: #f5f5f7;
 }
 
 .header__container {
@@ -18,12 +19,13 @@
   padding: 18px 40px;
 
   color: var(--color-dark-3xl);
-  background-color: transparent;
+  background-color: var(--color-light-xl);
 
   border: 1px solid var(--color-primary-light);
   border-radius: 24px;
 
   text-transform: uppercase;
+  text-decoration: none;
 
   cursor: pointer;
 
@@ -57,4 +59,139 @@
 
 .menu__link:hover {
   color: var(--color-primary-light);
+}
+
+.menu__burger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  cursor: pointer;
+}
+
+.menu__burger span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-dark-3xl);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__burger span:nth-of-type(2) {
+  top: calc(50% - 10px);
+}
+
+.menu__burger span:nth-of-type(3) {
+  top: calc(50% + 10px);
+}
+
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.menu__burger.active {
+  transform: rotate(-90deg);
+}
+
+.menu__burger.active > span {
+  background-color: var(--color-light-xl);
+}
+
+/* MEDIA */
+
+@media (max-width: 1240px) {
+  .header__logo {
+    max-width: 240px;
+  }
+
+  .header__button {
+    padding: 14px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    border-bottom: 1px solid #d2d2d7;
+
+    z-index: 6;
+  }
+
+  .header__logo {
+    max-width: 220px;
+  }
+
+  .header__button {
+    padding: 14px 15px;
+
+    font-size: 16px !important;
+
+    color: var(--color-light-xl);
+    background-color: var(--color-primary-light);
+  
+    border: 1px solid var(--color-primary-light);
+  }
+
+  .header__menu {
+    gap: 15px;
+  }
+
+  .menu__burger {
+    display: block;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 320px;
+    height: 100%;
+
+    background-color: var(--color-secondary);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    overflow: auto;
+
+    z-index: 2;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    height: 100%;
+  }
+
+  .header__menu li > a {
+    font-size: 24px;
+    color: var(--color-light-xl);
+  }
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 425px){
+  .header {
+    padding: 9px 0;
+  }
+
+  .header__menu {
+    gap: 50px
+  }
 }
