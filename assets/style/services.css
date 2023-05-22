@@ -38,6 +38,15 @@
   margin-bottom: 0;
 }
 
+.service__info {
+  padding-top: 16px;
+  margin: 0;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
 .service__button {
   display: flex;
   align-self: center;
@@ -186,11 +195,16 @@
 
   .service__price, .service__format {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     width: 100%;
 
     font-size: 15px;
+  }
+
+  .service__price-wrapper {
+    text-align: center;
   }
 }
 
@@ -199,13 +213,6 @@
     gap: 10px;
   }
 
-  .service__price, .service__format {
-    flex-direction: column;
-  }
-
-  .service__price-wrapper {
-    text-align: center;
-  }
 }
 
 @media (max-width: 425px){

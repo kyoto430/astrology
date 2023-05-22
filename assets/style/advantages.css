@@ -50,10 +50,18 @@
   .advantages__item {
     width: 60%;
   }
+
+  .advantages__item-img {
+    width: 84px;
+  }
 }
 
 @media (max-width: 425px){
   .advantages__item {
     width: 90%;
+  }
+
+  .advantages__item-img {
+    width: 64px;
   }
 }

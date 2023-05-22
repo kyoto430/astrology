@@ -13,11 +13,10 @@
   --color-secondary: #08a69c;
   --color-primary: #72a130;
   --color-primary-light: #8dc63f;
+  --color-info: #FF5A5A;
 
-  --width-slide: 600px;
-  --height-slide: 800px;
-  --width-block: 50%;
-  --gap: 10px;
+  --width-slide: 595px;
+  --height-slide: 700px;
 }
 
 html {
@@ -136,6 +135,10 @@ body {
 
 .color-secondary {
   color: var(--color-secondary);
+}
+
+.color-info {
+  color: var(--color-info)
 }
 
 .text-center {
@@ -268,6 +271,7 @@ body {
   .background-block::before {
     background-size: 90%;
   }
+  
 }
 
 @media (max-width: 1024px) {
@@ -324,6 +328,11 @@ body {
   .background-block::before {
     background-size: 70%;
   }
+
+  :root {
+    --width-slide: 100%;
+    --height-slide: 550px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -344,6 +353,12 @@ body {
     background-position: bottom left;
     background-size: 32%;
   }
+
+  .visually-hidden {
+    position: static;
+    transform: scale(1);
+  }
+
 }
 
 @media (max-width: 425px) {
@@ -366,7 +381,7 @@ body {
   }
 
   :root {
-    --width-slide: 400px;
+    --width-slide: 100%;
     --height-slide: 400px;
   }
 }

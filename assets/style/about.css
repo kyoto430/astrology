@@ -52,7 +52,7 @@
 }
 
 .about__image {
-  max-width: 50%;
+  width: 50%;
 }
 
 .about__image > img {
@@ -91,7 +91,7 @@
 
 @media (max-width: 425px){
   .about__image {
-    max-width: 100%;
+    width: 100%;
   }
 
   .about__content {
