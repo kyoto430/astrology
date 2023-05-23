@@ -72,6 +72,12 @@
   font-size: 16px;
 }
 
+.popup__subtitle-buy {
+  margin: 0;
+  padding: 20px 20px 0 20px;
+  font-size: 16px;
+}
+
 .popup__description {
   margin: 0;
   padding: 0 25px;
@@ -168,6 +174,12 @@
   .popup__description {
     padding: 0 5px;
 
+    font-size: 15px;
+  }
+
+  .popup__subtitle-buy {
+    padding: 10px 10px 0 10px;
+    
     font-size: 15px;
   }
 

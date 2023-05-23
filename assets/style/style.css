@@ -145,6 +145,10 @@ body {
   text-align: center;
 }
 
+.text-weight {
+  font-weight: 700;
+}
+
 .background-block {
   border-radius: 12px;
   padding: 45px;
